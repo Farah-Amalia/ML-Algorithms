@@ -26,7 +26,8 @@ class LinearRegression:
                 db = - 2 * np.sum(self.Y - Y_pred) / self.m           
                 # Updating parameters      
                 self.W = self.W - self.learning_rate * dW      
-                self.b = self.b - self.learning_rate * db 
+                self.b = self.b - self.learning_rate * db
+        # for Mean Absolute Error
         elif self.cost_function == "l1":
             for i in range(self.epochs):
                 Y_pred = self.predict(self.X) 
